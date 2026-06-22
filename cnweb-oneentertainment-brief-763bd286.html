@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壹号娱乐 · 简明指南与访问提示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrapper {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 560;
+            letter-spacing: -0.02em;
+            margin-top: 0.6rem;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b6b6b;
+            margin-bottom: 2.2rem;
+            border-left: 3px solid #d4d4d4;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 520;
+            margin-top: 2.8rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 520;
+            margin-top: 1.6rem;
+            margin-bottom: 0.4rem;
+            color: #2b2b2b;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #1f3a5f;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0b1d33;
+            border-bottom-color: #0b1d33;
+        }
+
+        /* 目录感卡片网格 */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 1.8rem 0 1.2rem;
+        }
+
+        .guide-card {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 1.2rem 1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .guide-card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .guide-card .card-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8a8a8a;
+            margin-bottom: 0.3rem;
+        }
+
+        .guide-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* 提示区块 */
+        .notice-block {
+            background: #f4f7fc;
+            border-left: 4px solid #1f3a5f;
+            border-radius: 0 8px 8px 0;
+            padding: 1.2rem 1.4rem;
+            margin: 1.5rem 0;
+        }
+
+        .notice-block p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .divider-soft {
+            margin: 2rem 0 1rem;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #dcdcdc, transparent);
+        }
+
+        /* 相关信息列表 */
+        .info-list {
+            list-style: none;
+            margin: 0.8rem 0 1.6rem;
+        }
+
+        .info-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e2e2e2;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .info-list li::before {
+            content: "·";
+            font-weight: 700;
+            color: #1f3a5f;
+            margin-right: 0.3rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 520;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: #3a3a3a;
+        }
+
+        .footer-meta {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #7a7a7a;
+            border-top: 1px solid #ececec;
+            padding-top: 1.5rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .guide-card {
+                padding: 1rem;
+            }
+
+            .notice-block {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <h1>壹号娱乐 · 简明访问指南</h1>
+    <div class="subhead">基于知识库视角的信息与提醒 &mdash; 面向新访客的目录式说明</div>
+
+    <!-- 简介区 -->
+    <p>
+        <strong>壹号娱乐</strong> 是一个以内容聚合与互动体验为方向的平台，覆盖多种线上娱乐形态。本文档并非官方手册，而是从用户角度整理的快速指引、常见疑问与访问注意事项。如果你正在了解或准备使用 <a href="https://cnweb-oneentertainment.com">壹号娱乐</a>，下面这些信息或许能帮你更快熟悉基本脉络。
+    </p>
+
+    <!-- 目录感：四个卡片 -->
+    <div class="guide-grid">
+        <div class="guide-card">
+            <div class="card-label">定位</div>
+            <p>侧重休闲内容与轻度互动，界面简洁，对移动设备支持较好。</p>
+        </div>
+        <div class="guide-card">
+            <div class="card-label">渠道</div>
+            <p>主要通过 Web 端访问，部分功能适配微信内打开，但建议使用系统浏览器获取完整体验。</p>
+        </div>
+        <div class="guide-card">
+            <div class="card-label">账号</div>
+            <p>注册流程基础，支持邮箱或手机号绑定。首次登录建议完成基础设置。</p>
+        </div>
+        <div class="guide-card">
+            <div class="card-label">内容</div>
+            <p>信息流、轻游戏、话题讨论等模块，分类清晰，可依据兴趣筛选。</p>
+        </div>
+    </div>
+
+    <!-- 进一步说明 -->
+    <h2>使用之前：三点提醒</h2>
+    <div class="notice-block">
+        <p><strong>1. 环境与安全</strong><br>
+        建议在私人网络环境下访问，并保持浏览器为更新版本。平台本身不要求额外插件，如遇弹窗要求安装不明程序，请保持警惕。</p>
+        <p style="margin-top: 0.8rem;"><strong>2. 内容筛选</strong><br>
+        平台内容由用户或合作方提供，存在一定差异。遇到不适内容可自行规避，也可通过内置反馈渠道标注。</p>
+        <p style="margin-top: 0.8rem;"><strong>3. 账号保护</strong><br>
+        不要向任何人透露你的密码或验证码。官方客服不会主动索要敏感信息。</p>
+    </div>
+
+    <h2>常见场景与切入方式</h2>
+    <p>根据大多数新用户的反馈，以下三个入口或功能最常被首先使用：</p>
+    <ul class="info-list">
+        <li><strong>信息流浏览</strong> — 打开后默认呈现推荐内容，支持按标签筛选。</li>
+        <li><strong>互动讨论区</strong> — 以主题帖形式组织，可以浏览或参与评论。</li>
+        <li><strong>轻量小游戏</strong> — 部分板块内嵌 HTML5 游戏，无需下载，即点即玩。</li>
+    </ul>
+    <p>如果你想直接前往主页探索，链接在此：<a href="https://cnweb-oneentertainment.com">壹号娱乐</a>。页面加载速度受网络影响，首次打开建议耐心等待数秒。</p>
+
+    <!-- FAQ 摘要 -->
+    <h2>FAQ 摘要</h2>
+    <div class="faq-item">
+        <strong>Q：是否必须注册才能浏览？</strong>
+        <p>部分内容支持游客浏览，但互动（评论、收藏、参与游戏）需要注册。具体限制以实际页面提示为准。</p>
+    </div>
+    <div class="faq-item">
+        <strong>Q：移动端和桌面端体验一致吗？</strong>
+        <p>核心功能一致，但部分布局元素在窄屏下会折叠。推荐在手机上横屏或使用平板类设备获得更舒适的阅读面积。</p>
+    </div>
+    <div class="faq-item">
+        <strong>Q：如何反馈问题？</strong>
+        <p>页面底部一般设有“帮助”或“联系”入口。你也可以通过社交媒体渠道尝试联系运营方。响应时间不定，请耐心等候。</p>
+    </div>
+
+    <!-- 相关信息区 -->
+    <h2>相关信息</h2>
+    <p>
+        <strong>更新与状态：</strong> 该平台不定期进行维护或功能调整，某些时段可能出现暂时不可用。建议将 <a href="https://cnweb-oneentertainment.com">壹号娱乐</a> 加入书签，以便后续快速定位。
+    </p>
+    <p>
+        <strong>同类参考：</strong> 如果你喜欢这种信息聚合模式，也可以关注其他类似平台进行比较。不过本文档仅围绕 <a href="https://cnweb-oneentertainment.com">壹号娱乐</a> 做客观介绍，不进行横向对比或推荐。
+    </p>
+
+    <div class="divider-soft"></div>
+
+    <!-- 提示区 -->
+    <div class="notice-block" style="background: #f8f8f8; border-left-color: #8a8a8a;">
+        <p style="font-size: 0.95rem;"><strong>📌 最后提醒</strong><br>
+        本指南基于公开信息与一般使用经验整理，不构成任何官方立场。平台具体规则以 <a href="https://cnweb-oneentertainment.com">壹号娱乐</a> 页面实际展示为准。请合理分配时间，保持健康的线上娱乐习惯。</p>
+    </div>
+
+    <div class="footer-meta">
+        <span>知识库入口式索引 · 仅供了解参考</span>
+    </div>
+</div>
+</body>
+</html>
